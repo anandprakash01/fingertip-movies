@@ -1,5 +1,4 @@
 
-
 const API_KEY = "api_key=d6a90eff85ca8ee94564a85d832ee40a";
 const BASE_URL = "https://api.themoviedb.org/3";
 // const API_URL = BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY;
@@ -13,14 +12,14 @@ const search = document.getElementById("search");
 const searchBtn = document.getElementById("nav-search-btn");
 const tagsEl = document.getElementById("tags");//for genres
 
-const prev = document.getElementById("pre");
-const next = document.getElementById("next");
-const current = document.getElementById("current");
+const prevEl = document.getElementById("prev");
+const nextEl = document.getElementById("next");
+const currentEl = document.getElementById("current");
 
 //varibles for pagination
 let currentPage = 1;
 let nextPage = 2;
-let prevPage = 3;
+let prevPage = 0;
 let lastURL = "";
 let totalPages = 10;
 
@@ -66,29 +65,27 @@ function getMovies(url) {
         if (data.results.length != 0) {
             showMovies(data.results);
             currentPage = data.page;
-            nextPage = data.page + 1;
-            prevPage = data.page - 1;
+            nextPage = currentPage + 1;
+            prevPage = currentPage - 1;
             totalPages = data.total_pages;
 
             current.innerText = currentPage;
             if (currentPage <= 1) {
-                prev.classList.add('disabled');
-                next.classList.remove('disabled')
+                prevEl.classList.add('disabled');
             }
             else if (currentPage >= totalPages) {
-                prev.classList.remove('disabled');
-                next.classList.add('disabled')
+                nextEl.classList.add('disabled')
             }
             else {
-                prev.classList.remove('disabled');
-                next.classList.remove('disabled')
+                prevEl.classList.remove('disabled');
+                nextEl.classList.remove('disabled')
             }
             // tagsEl.scrollIntoView({behavior:"smooth"});
             // search.scrollIntoView({behavior:"smooth"});
 
         }
         else {
-            movieContainer.innerHTML = `<h1>No Results Found</h1>`;
+            movieContainer.innerHTML = `<h1>No Results Found !</h1>`;
         }
     })
 }
@@ -103,10 +100,14 @@ function showMovies(data) {
         movieElement.classList.add("movie-card");
         movieElement.innerHTML = `
             <img src="${poster_path ? IMG_URL + poster_path : "./photo.jpg"}">
-            <div>${title}</div>
-                <div class="lang-rating">
-                <p>${original_language}</p>
-                <p>${vote_average}</p>
+            <div class="movie-name">${title}</div>
+            <div class="movie-lang">
+                <span>Language</span>
+                <span>${original_language}</span>
+            </div>
+            <div class="movie-rating">
+                <span>Rating</span>
+                <span>${vote_average}</span>
             </div>
         `
 
@@ -138,15 +139,16 @@ search.addEventListener("input", () => {
 //         getMovies(API_URL);
 //     }
 // }
-searchBtn.addEventListener("click", () => {
-    const searchTxt = search.value;
-    if (searchTxt) {
-        getMovies(search_URL + "&query=" + searchTxt);
-    }
-    else {
-        getMovies(API_URL);
-    }
-});
+
+// searchBtn.addEventListener("click", () => {
+//     const searchTxt = search.value;
+//     if (searchTxt) {
+//         getMovies(search_URL + "&query=" + searchTxt);
+//     }
+//     else {
+//         getMovies(API_URL);
+//     }
+// });
 
 
 //genres fitltering
@@ -200,13 +202,13 @@ function HighlightSelectedGenre() {
 function clearbtn() {
     const clrBtn = document.getElementById("clearBtn");
     if (clrBtn) {
-        clrBtn.classList.add("highlight");
+
     }
     else {
         const clear = document.createElement("div");
         clear.classList.add("genres-types", "highlight");
         clear.id = "clearBtn";
-        clear.innerText = "Clear x";
+        clear.innerText = "Clear All";
         clear.addEventListener("click", () => {
             selectedGenres = [];
             setGenres();
@@ -217,12 +219,12 @@ function clearbtn() {
 }
 
 //Pagination 
-pre.addEventListener("click", () => {
+prevEl.addEventListener("click", () => {
     if (prevPage > 0) {
         pageCall(prevPage);
     }
 })
-next.addEventListener("click", () => {
+nextEl.addEventListener("click", () => {
     if (nextPage <= totalPages) {
         pageCall(nextPage);
     }

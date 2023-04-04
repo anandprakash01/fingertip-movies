@@ -1,0 +1,7 @@
+.nav-bar{
+    flex-direction: column;
+}
+#nav-search input{
+    width: 14rem;
+    margin: 0;
+}

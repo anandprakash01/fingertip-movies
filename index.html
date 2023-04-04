@@ -6,51 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fingertip Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="./phone.css">
 
 </head>
 
 <body>
     <nav class="nav-bar">
         <div id="home-logo">
-            <a href="./index.html">My Movies App</a>
+            <a href="./index.html">
+                <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
+            </a>
         </div>
-        <div class="nav-search">
-            <button class="btn" id="nav-search-btn">Search</button>
-            <input type="text" id="search" placeholder="Search here..">
+        <div id="nav-search">
+            <input type="text" id="search" placeholder="What are you looking for? ">
         </div>
     </nav>
-    <div class="horizontal-line"></div>
-    <div class="main-page">
-        <div id="genres-section">
-            <h2>Genres</h2>
-            <div id="tags">
 
-                <!-- <div class="genres-types">Action</div> -->
-                
-            </div>
+    <div id="genres-section">
+        <div id="tags">
+
+            <!-- <div class="genres-types">Action</div> -->
 
         </div>
+    </div>
+
+    <div class="main-page">
+
         <div id="movies-container">
 
             <!-- <div class="movie-card">
                 <img src="./photo.jpg">
-                <div>Movie Namsse</div>
-                <div class="lang-rating">
-                    <p>En</p>
-                    <p>9.9</p>
+                <div class="movie-name">Movie Namsse</div>
+                <div class="movie-lang">
+                    <span>Language</span>
+                    <span></span>
+                </div>
+                <div class="movie-rating">
+                    <span>Rating</span>
+                    <span></span>
                 </div>
             </div> -->
+        </div>
+
+        <div id="pagination-section">
+            <div id="prev" class="page">Previous Page</div>
+            <div id="current" class="current">1</div>
+            <div id="next" class="page">Next Page</div>
+        </div>
+
+    </div>
+
+    <section class="footer">
+        <div class="box-container">
+            <div id="about-us" class="box">
+                <h3>About us</h3>
+                <p>
+                    Fingertip Movies is an online movie booking platform.. It has a huge collection of latest movies and
+                    films. It is available in many locations so you can choose a location and book anywhere. So the next
+                    time when you want to book a movie don't go anywhere just visit our site and get your job done.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Loctions</h3>
+                <a href="#">Delhi</a>
+                <a href="#">Mumbai</a>
+                <a href="#">Pune</a>
+                <a href="#">Bangalore</a>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Book</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Follow us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Linkedin</a>
+            </div>
 
         </div>
-    </div>
 
-    <div id="pagination-section">
-        <div id="pre" class="page">Previous Page</div>
-        <div id="current" class="current">1</div>
-        <div id="next" class="page">Next Page</div>
-    </div>
-
+        <div class="credit">
+            <span class="first-word">Fingertip</span> <span class="second-word">Movies </span>| All rights reserved!
+        </div>
+    </section>
 
 
     <script src="./App.js"></script>
