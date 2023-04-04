@@ -147,9 +147,10 @@ body{
 .movie-card img {
     padding: 0.7rem;
     object-fit: cover;
+    width: 14rem;
     height: 19rem;
-    width: 13rem;
     border-radius: 0.5rem;
+    margin: auto;
 }
 
 .movie-card img:hover {
@@ -157,10 +158,10 @@ body{
 }
 
 .movie-name{
-    width: 11rem;
+    width: 14rem;
     height: 3rem;
     text-align: center;
-    margin: 0.3rem 1rem;
+    margin: 0.1rem auto;
     font-weight: 500;
     font-size: 1.1rem;
 }
@@ -246,7 +247,6 @@ body{
     font-size: .8rem;
     padding: 0.7rem 0;
     color: #eee;
-
 }
 .footer .box-container .box a{
     display: block;

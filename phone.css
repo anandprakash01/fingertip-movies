@@ -1,7 +1,21 @@
 .nav-bar{
     flex-direction: column;
 }
+#nav-search{
+    margin-bottom: 1rem;
+}
 #nav-search input{
     width: 14rem;
     margin: 0;
+}
+.movie-card{
+    width: 11rem;
+}
+.movie-card img{
+    height: 16rem;
+    width: 11rem;
+}
+.movie-name{
+    width: 10rem;
+    height: 4rem;
 }
