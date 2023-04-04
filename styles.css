@@ -234,23 +234,23 @@ body{
     flex: 1 1 15%;
 }
 #about-us{
-    flex-basis: 40%;
+    flex-basis: 35%;
 }
 .footer .box-container .box h3{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: .2rem 0;
     color: #fff;
     
 }
 .footer .box-container .box p{
-    font-size: 1rem;
+    font-size: .8rem;
     padding: 0.7rem 0;
     color: #eee;
 
 }
 .footer .box-container .box a{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.2rem 0;
     color: #eee;
 }
