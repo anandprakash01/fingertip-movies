@@ -8,14 +8,36 @@
     width: 14rem;
     margin: 0;
 }
-.movie-card{
-    width: 11rem;
+
+
+#home-logo #first-word {
+    margin-left: 0;
 }
+
+
+.genres-types {
+    font-size: .9rem;
+}
+
 .movie-card img{
-    height: 16rem;
-    width: 11rem;
+    height: 14rem;
+    width: 10rem;
 }
 .movie-name{
     width: 10rem;
-    height: 4rem;
+    height: 3.5rem;
+}
+
+.page {
+    font-size: .7rem;
+    margin: 0.3rem;
+    padding: 0.2rem;
+}
+.current {
+    font-size: .9rem;
+}
+
+
+.footer .box-container .box h3 {
+    font-size: 1rem;
 }
