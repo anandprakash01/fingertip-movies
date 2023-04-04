@@ -109,13 +109,13 @@ body{
     justify-content: center;
 }
 .genres-types {
-    width: 9rem;
+    width: 6rem;
     border-radius: 0.5rem;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0;
     background-color: #515151;
-    font-size: 1.1rem;
+    font-size: .8rem;
     border: 0.1rem solid white;
-    margin: 0.1rem 0.3rem;
+    margin: 0.3rem 0.1rem;
     color: white;
     text-align: center;
     cursor: pointer;
