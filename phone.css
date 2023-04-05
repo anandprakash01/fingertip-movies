@@ -11,8 +11,10 @@ html {
 #nav-search input{
     margin: 0;
 }
-
-
+#nav-search button {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
 #home-logo #first-word {
     margin-left: 0;
 }

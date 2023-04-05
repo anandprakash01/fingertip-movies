@@ -16,6 +16,8 @@ const prevEl = document.getElementById("prev");
 const nextEl = document.getElementById("next");
 const currentEl = document.getElementById("current");
 
+const popupContainer = document.getElementById('popup');
+
 //varibles for pagination
 let currentPage = 1;
 let nextPage = 2;
@@ -45,6 +47,7 @@ const genres = [
     { "id": 37, "name": "Western" }
 ];
 
+let popupID;
 let selectedGenres = [];
 
 getMovies(API_URL);
@@ -61,7 +64,7 @@ function getMovies(url) {
     // })
     lastURL = url;
     fetch(url).then(res => res.json()).then(data => {
-        // console.log(data);
+        console.log(data);
         if (data.results.length != 0) {
             showMovies(data.results);
             currentPage = data.page;
@@ -92,12 +95,16 @@ function getMovies(url) {
 
 function showMovies(data) {
     movieContainer.innerHTML = ' ';
+    popupContainer.innerHTML = ' ';
 
     data.forEach(movies => {
 
-        const { original_language, poster_path, title, vote_average, overview } = movies;
+        const { title, id, release_date, original_language, poster_path, vote_average, overview } = movies;
+
+        // -------------for movieContainer------------
         const movieElement = document.createElement('div');
         movieElement.classList.add("movie-card");
+        // movieElement.id=id;
         movieElement.innerHTML = `
             <img src="${poster_path ? IMG_URL + poster_path : "./photo.jpg"}">
             <div class="movie-name">${title}</div>
@@ -112,9 +119,90 @@ function showMovies(data) {
         `
 
         movieContainer.appendChild(movieElement);
-    });
+
+        // -------------for popup container---------------
+        const popup = document.createElement('div');
+        // popup.classList.add('disciption-popup', 'openPop');
+        popup.classList.add('disciption-popup', 'open-popup');
+        popup.id = id;
+        popup.innerHTML = `
+            <img src="${poster_path ? IMG_URL + poster_path : "./photo.jpg"}">
+            <div class="movie-details">
+                <div class="popup-name">${title}</div>
+                <button class="close">X</button>
+                <div class="popup-lang">${original_language}</div>
+                <div class="popup-rating">${vote_average}/10</div>
+                <div class="popup-date">Release Date: ${release_date}</div>
+                <div class="popup-detail">${overview}</div>
+                <button class="btn popup-btn book-now">Book Now</button>
+            </div>
+        `
+        popupContainer.appendChild(popup);
+
+        // ----------------for popup display-------------
+
+        movieElement.addEventListener('click', () => {
+            let popid = id
+            // console.log('working');
+            const popupCard = document.querySelectorAll('.disciption-popup');
+            popupCard.forEach(movie => {
+                movie.classList.add('open-popup');
+            });
+            // const p = document.getElementById(id);
+            popupCard.forEach(movie => {
+                // console.log("working");
+
+                if (popid == movie.id) {
+                    const m = document.getElementById(movie.id);
+                    m.classList.remove('open-popup');
+                    m.style.transform = 'scale(1)'
+
+                    //--------------for close btn-------
+                    const Btns = document.querySelectorAll('.close');
+                    Btns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const btnpop = document.getElementById(movie.id);
+                            m.style.transform = 'scale(0.1)'
+                            btnpop.classList.add('open-popup');
+                        });
+                    })
+                }
+
+            })
+        });
+    })
 }
 
+
+//booking popup
+bookinPopup();
+closeBtn();
+function bookinPopup() {
+    const book = document.querySelectorAll('.book-now');
+    // console.log(book);
+    book.forEach(btn => {
+        btn.addEventListener('click', () => {
+            
+            const p = document.getElementById('booking');
+            p.style.transform = 'scale(1)'
+            p.classList.remove('open-popup');
+        })
+    });
+}
+function closeBtn() {
+    const Btns = document.querySelectorAll('.close');
+    // console.log(Btns);
+    Btns.forEach(btn => {
+        if(btn.id=='booking-close'){
+            btn.addEventListener('click', () => {
+                console.log('working');
+                const p = document.getElementById('booking');
+                p.style.transform = 'scale(0.1)'
+                p.classList.add('open-popup');
+            });
+        }
+    })
+}
 
 // Search functions
 search.addEventListener("input", () => {
@@ -163,7 +251,8 @@ function setGenres() {
         t.addEventListener("click", () => {
             if (selectedGenres.length == 0) {
                 selectedGenres.push(genre.id);
-            } else {
+            }
+            else {
                 if (selectedGenres.includes(genre.id)) {
                     selectedGenres.forEach((id, idx) => {
                         if (id == genre.id) {
@@ -202,7 +291,9 @@ function HighlightSelectedGenre() {
 function clearbtn() {
     const clrBtn = document.getElementById("clearBtn");
     if (clrBtn) {
-
+        if (selectedGenres.length == 0) {
+            setGenres();
+        }
     }
     else {
         const clear = document.createElement("div");

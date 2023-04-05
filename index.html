@@ -27,8 +27,66 @@
         </div>
         <div id="nav-search">
             <input type="text" id="search" placeholder="What are you looking for? ">
+            <button class="btn book-now">Book Now</button>
         </div>
     </nav>
+
+    <div class="book-popup open-popup" id="booking">
+        <button class="close" id="booking-close">X</button>
+        <h1>Checkout</h1>
+        <div>
+            <form>
+                <h2>Payment</h2>
+                <div class="form-group">
+                    <label for="firstname">First Name* </label>
+                    <input id="firstname" placeholder="First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name* </label>
+                    <input id="lastname" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input id="email" placeholder="First Name">
+                </div>
+
+                <div class="radio-btn">
+                    <p>Select a Payment Method</p>
+                    <div class="form-group">
+                        <input type="radio" id="creditcard" name="payment-method" value="creditcard">
+                        <label for="creditcard">Credit Card</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="radio" id="dabitcard" name="payment-method" value="dabitcard">
+                        <label for="dabitcard">Dabit Card</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="radio" id="upi" name="payment-method" value="upi">
+                        <label for="upi">UPI</label>
+                    </div>
+
+
+                </div>
+
+            </form>
+
+            <div class="summary">
+                <h2>Iron Man</h2>
+                <div>No of ticket : </div>
+                <div>Convenience fee + GST (18.6%)</div>
+                <div>Sub total :</div>
+            </div>
+            
+        </div>
+        <div class="paybtn">
+            <button id="pay" class="btn book-now">Proceed to pay</button>
+        </div>
+    </div>
+
 
     <div id="genres-section">
         <div id="tags">
@@ -39,7 +97,9 @@
     </div>
 
     <div class="main-page">
-
+        <div class="book-ticket">
+            <div>Book your favorite movie now</div>
+        </div>
         <div id="movies-container">
 
             <!-- <div class="movie-card">
@@ -52,6 +112,22 @@
                 <div class="movie-rating">
                     <span>Rating</span>
                     <span></span>
+                </div>
+            </div> -->
+
+        </div>
+        <div id="popup">
+            <!-- <div class="disciption-popup">
+                <img src="./photo.jpg">
+                <div class="movie-details">
+                    <div class="popup-name">Movie Namsse</div>
+                    <button class="close">X</button>
+                    <div class="popup-lang">En</div>
+                    <div class="popup-rating">7.2/10</div>
+                    <div class="popup-date">Release Date: 12/13/14</div>
+                    <div class="popup-detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
+                        magnam!</div>
+                    <button class="btn book-now popup-btn">Book Now</button>
                 </div>
             </div> -->
         </div>
