@@ -203,6 +203,7 @@ body {
 }
 .paybtn #pay{
     width: 10rem;
+    margin: 1.5rem 0;
 }
 
 .book-popup .summary h1{
@@ -279,6 +280,7 @@ body {
     background: #008612;
     padding: 0.5rem 0;
     position: relative;
+    left: 100%;
     animation-name: left-to-right;
     animation-duration: 10s;
     animation-delay: 0ms;
@@ -288,10 +290,10 @@ body {
 
 @keyframes left-to-right {
     from {
-        transform: translateX(83rem);
+        left: 100%;
     }
     to {
-        transform: translateX(-100%);
+        left: -55%;
     }
 }
 

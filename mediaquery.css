@@ -1,0 +1,78 @@
+
+
+/*low resolution tablet and ipad*/
+@media (max-width:767px) {
+    html {
+        font-size: 70%;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    #nav-search{
+        margin-bottom: 1rem;
+    }
+    
+    #nav-search input{
+        margin: 0;
+    }
+    #nav-search button {
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+    #home-logo #first-word {
+        margin-left: 0;
+    }
+    
+    .book-popup .close {
+        top: 2%;
+        left: 87%;
+    }
+    .book-popup h1+div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-popup form, .book-popup .summary {
+        width: 100%;
+    }
+    .footer .box-container .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .disciption-popup {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close {
+        position: absolute;
+        left: 87%;
+        top: 3%;
+    }
+    .disciption-popup {
+        padding: 1rem 0;
+    }
+}
+
+/*portrait mode tablet and ipad*/
+@media (min-width:768px) and (max-width:1024px) {
+    .book-popup .close {
+        left: 90%;
+    }
+}
+
+/*laptop*/
+@media (min-width:1025px) and (max-width:1280px) {
+  
+}
+
+/*large screen*/
+@media(min-width:1281px) {
+    .book-popup form {
+        width: 30rem;
+    }
+    .book-popup .close {
+        left: 97%;
+    }
+    
+}
