@@ -42,6 +42,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 75%;
+        top: 15%;
+        left: 14%;
+
     }
 
     .close {
@@ -52,11 +56,23 @@
     .disciption-popup {
         padding: 1rem 0;
     }
+    .book-popup {
+        top: 15%;
+        left: 14%;
+        width: 75%;
+    }
 }
 
 /*portrait mode tablet and ipad*/
 @media (min-width:768px) and (max-width:1024px) {
     .book-popup .close {
+        left: 90%;
+    }
+    .disciption-popup img {
+        width: 10rem;
+        height: 12rem;
+    }
+    .close {
         left: 90%;
     }
 }
@@ -72,7 +88,7 @@
         width: 30rem;
     }
     .book-popup .close {
-        left: 97%;
+        left: 94%;
     }
     
 }
