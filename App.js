@@ -134,7 +134,7 @@ function showMovies(data) {
                 <div class="popup-rating">${vote_average}/10</div>
                 <div class="popup-date">Release Date: ${release_date}</div>
                 <div class="popup-detail">${overview}</div>
-                <button class="btn popup-btn book-now">Book Now</button>
+                <button class="btn popup-btn book-now" onclick="bookinPopup()">Book Now</button>
             </div>
         `
         popupContainer.appendChild(popup);
@@ -175,19 +175,19 @@ function showMovies(data) {
 
 
 //booking popup
-bookinPopup();
+
 closeBtn();
 function bookinPopup() {
-    const book = document.querySelectorAll('.book-now');
-    // console.log(book);
-    book.forEach(btn => {
-        btn.addEventListener('click', () => {
+    // const book = document.querySelectorAll('.book-now');
+    // // console.log(book);
+    // book.forEach(btn => {
+    //     btn.addEventListener('click', () => {
             
             const p = document.getElementById('booking');
             p.style.transform = 'scale(1)'
             p.classList.remove('open-popup');
-        })
-    });
+        // })
+    // });
 }
 function closeBtn() {
     const Btns = document.querySelectorAll('.close');
