@@ -12,7 +12,7 @@ const search = document.getElementById("search");
 const searchBtn = document.getElementById("nav-search-btn");
 const tagsEl = document.getElementById("tags");//for genres
 
-const prevEl = document.getElementById("prev");
+const prevEl = document.getElementById("prev");//pagination
 const nextEl = document.getElementById("next");
 const currentEl = document.getElementById("current");
 
@@ -25,7 +25,7 @@ let prevPage = 0;
 let lastURL = "";
 let totalPages = 10;
 
-const genres = [
+const genres = [// "/genre/movie/list"
     { "id": 28, "name": "Action" },
     { "id": 12, "name": "Adventure" },
     { "id": 16, "name": "Animation" },
@@ -64,7 +64,7 @@ function getMovies(url) {
     // })
     lastURL = url;
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data);
+        // console.log(data);
         if (data.results.length != 0) {
             showMovies(data.results);
             currentPage = data.page;
@@ -88,7 +88,7 @@ function getMovies(url) {
 
         }
         else {
-            movieContainer.innerHTML = `<h1>No Results Found !</h1>`;
+            movieContainer.innerHTML = `<h1 class="no-result">No Results Found !</h1>`;
         }
     })
 }
@@ -122,7 +122,6 @@ function showMovies(data) {
 
         // -------------for popup container---------------
         const popup = document.createElement('div');
-        // popup.classList.add('disciption-popup', 'openPop');
         popup.classList.add('disciption-popup', 'open-popup');
         popup.id = id;
         popup.innerHTML = `
@@ -182,18 +181,18 @@ function bookinPopup() {
     // // console.log(book);
     // book.forEach(btn => {
     //     btn.addEventListener('click', () => {
-            
-            const p = document.getElementById('booking');
-            p.style.transform = 'scale(1)'
-            p.classList.remove('open-popup');
-        // })
+
+    const p = document.getElementById('booking');
+    p.style.transform = 'scale(1)'
+    p.classList.remove('open-popup');
+    // })
     // });
 }
 function closeBtn() {
     const Btns = document.querySelectorAll('.close');
     // console.log(Btns);
     Btns.forEach(btn => {
-        if(btn.id=='booking-close'){
+        if (btn.id == 'booking-close') {
             btn.addEventListener('click', () => {
                 console.log('working');
                 const p = document.getElementById('booking');

@@ -301,14 +301,16 @@ body {
 
 #movies-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #1b1b1b;
     border-radius: .5rem;
 }
-
+.no-result{
+    margin: 70px 0;
+}
 .movie-card {
     margin: 1rem 0.5rem;
     background-color: #0e0e0e;
