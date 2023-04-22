@@ -265,6 +265,8 @@ function setGenres() {
             }
             // console.log(selectedGenres);
             getMovies(API_URL + "&with_genres=" + encodeURI(selectedGenres.join(",")));
+            //if we use without encodeURI it will still work but A comma in a string should be encoded as %2C.
+            //A comma in a string should be encoded as %2C . It is recommended to use platform's normal URL building libraries to automatically encode your URLs
             HighlightSelectedGenre();
             // clearbtn();
         })
