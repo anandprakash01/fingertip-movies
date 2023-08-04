@@ -33,6 +33,8 @@ Deployed link: https://fingertip-movies.netlify.app/
 
 ![Genre filter](./screenshots/filter.png)
 
+![Pagination](./screenshots/pagination.png)
+
 ![Movie detail](./screenshots/moviePopup.png)
 
 ![Booking](./screenshots/bookingpopup.png)
