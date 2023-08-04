@@ -27,15 +27,27 @@ Deployed link: https://fingertip-movies.netlify.app/
 
 ## Screenshots
 
+Home Page
+
 ![Home](./screenshots/home.png)
+
+Search
 
 ![Search](./screenshots/search.png)
 
+Genre filter
+
 ![Genre filter](./screenshots/filter.png)
+
+Pages
 
 ![Genre filter](./screenshots/pagination.png)
 
+Movie Detail
+
 ![Movie detail](./screenshots/moviePopup.png)
+
+Booking popup
 
 ![Booking](./screenshots/bookingpopup.png)
 
