@@ -29,13 +29,18 @@ Deployed link: https://fingertip-movies.netlify.app/
 
 ![Home](./screenshots/home.png)
 
+
 ![Search](./screenshots/search.png)
+
 
 ![Genre filter](./screenshots/filter.png)
 
+
 ![Movie detail](./screenshots/moviePopup.png)
 
+
 ![Booking](./screenshots/bookingpopup.png)
+
 
 ## Installation
 
