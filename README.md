@@ -2,7 +2,7 @@
 
 ![Project Logo](./screenshots/logo.png)
 
-Fingertip Movies is a dynamic and user-friendly web application that allows users to discover and search for movies. It's built using HTML, CSS, and JavaScript, making it lightweight and easy to use.
+Fingertip Movies is a dynamic and user-friendly web application that allows users to discover and search for movies. It's built using HTML, CSS, and JavaScript, making it lightweight and easy to use. and it interacts with APIs for data retrieval and updates.
 
 ## Table of Contents
 
