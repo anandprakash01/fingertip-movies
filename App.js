@@ -63,9 +63,9 @@ function getMovies(url) {
   // })
   lastURL = url;
   fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data);
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
       if (data.results.length != 0) {
         showMovies(data.results);
         currentPage = data.page;
@@ -94,7 +94,7 @@ function showMovies(data) {
   movieContainer.innerHTML = " ";
   popupContainer.innerHTML = " ";
 
-  data.forEach((movies) => {
+  data.forEach(movies => {
     const {
       title,
       id,
@@ -148,11 +148,11 @@ function showMovies(data) {
       let popid = id;
       // console.log('working');
       const popupCard = document.querySelectorAll(".disciption-popup");
-      popupCard.forEach((movie) => {
+      popupCard.forEach(movie => {
         movie.classList.add("open-popup");
       });
       // const p = document.getElementById(id);
-      popupCard.forEach((movie) => {
+      popupCard.forEach(movie => {
         // console.log("working");
 
         if (popid == movie.id) {
@@ -162,7 +162,7 @@ function showMovies(data) {
 
           //--------------for close btn-------
           const Btns = document.querySelectorAll(".close");
-          Btns.forEach((btn) => {
+          Btns.forEach(btn => {
             btn.addEventListener("click", () => {
               const btnpop = document.getElementById(movie.id);
               m.style.transform = "scale(0.1)";
@@ -193,7 +193,7 @@ function bookinPopup() {
 function closeBtn() {
   const Btns = document.querySelectorAll(".close");
   // console.log(Btns);
-  Btns.forEach((btn) => {
+  Btns.forEach(btn => {
     if (btn.id == "booking-close") {
       btn.addEventListener("click", () => {
         console.log("working");
@@ -240,7 +240,7 @@ search.addEventListener("input", () => {
 //genres fitltering
 function setGenres() {
   tagsEl.innerHTML = "";
-  genres.forEach((genre) => {
+  genres.forEach(genre => {
     const t = document.createElement("div");
     t.classList.add("genres-types");
     t.id = genre.id;
@@ -273,12 +273,12 @@ function setGenres() {
 
 function HighlightSelectedGenre() {
   const tags = document.querySelectorAll(".genres-types");
-  tags.forEach((tag) => {
+  tags.forEach(tag => {
     tag.classList.remove("highlight");
   });
   clearbtn();
   if (selectedGenres.length != 0) {
-    selectedGenres.forEach((id) => {
+    selectedGenres.forEach(id => {
       const highlightedEl = document.getElementById(id);
       highlightedEl.classList.add("highlight");
     });
