@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Fingertip Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <link rel="stylesheet" href="./css/mediaquery.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+
+    <!-- Updated JS reference to use modules -->
+    <script type="module" src="./js/main.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="nav-bar">
+      <div id="home-logo">
+        <a href="./index.html">
+          <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
+        </a>
+      </div>
+      <div id="nav-search">
+        <input type="text" id="search" placeholder="What are you looking for? " />
+        <button class="btn book-now" onclick="bookingPopup()">Book Now</button>
+        <a href="./profile.html" class="profile-icon active">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <i class="fas fa-user" aria-hidden="true"></i>
+        </div>
+        <h1 class="profile-name">User</h1>
+        <p class="profile-email">user@example.com</p>
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Movies Watched</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Watchlist</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-tabs">
+        <button class="tab-btn active" data-tab="personal-info">Personal Info</button>
+        <button class="tab-btn" data-tab="booking-history">Booking History</button>
+        <button class="tab-btn" data-tab="watchlist">Watchlist</button>
+        <button class="tab-btn" data-tab="settings">Settings</button>
+      </div>
+
+      <div class="profile-content">
+        <!-- Personal Info Tab -->
+        <div class="tab-content active" id="personal-info">
+          <h2>Personal Information</h2>
+          <form class="profile-form">
+            <div class="form-group">
+              <label for="profile-firstname">First Name</label>
+              <input type="text" id="profile-firstname" placeholder="Raj" />
+            </div>
+            <div class="form-group">
+              <label for="profile-lastname">Last Name</label>
+              <input type="text" id="profile-lastname" placeholder="Prakash" />
+            </div>
+            <div class="form-group">
+              <label for="profile-email">Email</label>
+              <input
+                type="email"
+                id="profile-email"
+                placeholder="rajprakash@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="profile-phone">Phone</label>
+              <input type="tel" id="profile-phone" placeholder="+91 xxxx xxxx xx" />
+            </div>
+            <div class="form-group">
+              <label for="profile-dob">Date of Birth</label>
+              <input type="date" id="profile-dob" placeholder="2025-01-01" />
+            </div>
+            <div class="form-group">
+              <label for="profile-location">Location</label>
+              <input type="text" id="profile-location" placeholder="Indore, India" />
+            </div>
+            <button type="button" class="btn save-btn">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Booking History Tab -->
+        <div class="tab-content" id="booking-history">
+          <h2>Your Booking History</h2>
+          <div class="booking-list">
+            <div class="booking-card">
+              <div class="booking-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+              </div>
+              <div class="booking-details">
+                <h3>Avengers: Endgame</h3>
+                <p><strong>Date:</strong> 15 May 2023</p>
+                <p><strong>Time:</strong> 7:30 PM</p>
+                <p><strong>Seats:</strong> J12, J13</p>
+                <p><strong>Total:</strong> $24.00</p>
+                <div class="booking-status completed">Completed</div>
+              </div>
+            </div>
+            <div class="booking-card">
+              <div class="booking-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+              </div>
+              <div class="booking-details">
+                <h3>The Batman</h3>
+                <p><strong>Date:</strong> 28 April 2023</p>
+                <p><strong>Time:</strong> 9:00 PM</p>
+                <p><strong>Seats:</strong> F5, F6, F7</p>
+                <p><strong>Total:</strong> $36.00</p>
+                <div class="booking-status completed">Completed</div>
+              </div>
+            </div>
+            <div class="booking-card">
+              <div class="booking-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+              </div>
+              <div class="booking-details">
+                <h3>Dune</h3>
+                <p><strong>Date:</strong> 10 June 2023</p>
+                <p><strong>Time:</strong> 6:15 PM</p>
+                <p><strong>Seats:</strong> D8, D9</p>
+                <p><strong>Total:</strong> $24.00</p>
+                <div class="booking-status upcoming">Upcoming</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Watchlist Tab -->
+        <div class="tab-content" id="watchlist">
+          <h2>Your Watchlist</h2>
+          <div class="watchlist-grid">
+            <div class="watchlist-card">
+              <div class="watchlist-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+                <div class="watchlist-actions">
+                  <button class="action-btn"><i class="fas fa-trash"></i></button>
+                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
+                </div>
+              </div>
+              <h3>Inception</h3>
+              <div class="watchlist-rating">
+                <i class="fas fa-star"></i>
+                <span>8.8/10</span>
+              </div>
+            </div>
+            <div class="watchlist-card">
+              <div class="watchlist-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+                <div class="watchlist-actions">
+                  <button class="action-btn"><i class="fas fa-trash"></i></button>
+                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
+                </div>
+              </div>
+              <h3>The Shawshank Redemption</h3>
+              <div class="watchlist-rating">
+                <i class="fas fa-star"></i>
+                <span>9.3/10</span>
+              </div>
+            </div>
+            <div class="watchlist-card">
+              <div class="watchlist-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+                <div class="watchlist-actions">
+                  <button class="action-btn"><i class="fas fa-trash"></i></button>
+                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
+                </div>
+              </div>
+              <h3>The Dark Knight</h3>
+              <div class="watchlist-rating">
+                <i class="fas fa-star"></i>
+                <span>9.0/10</span>
+              </div>
+            </div>
+            <div class="watchlist-card">
+              <div class="watchlist-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+                <div class="watchlist-actions">
+                  <button class="action-btn"><i class="fas fa-trash"></i></button>
+                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
+                </div>
+              </div>
+              <h3>Pulp Fiction</h3>
+              <div class="watchlist-rating">
+                <i class="fas fa-star"></i>
+                <span>8.9/10</span>
+              </div>
+            </div>
+            <div class="watchlist-card">
+              <div class="watchlist-poster">
+                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
+                <div class="watchlist-actions">
+                  <button class="action-btn"><i class="fas fa-trash"></i></button>
+                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
+                </div>
+              </div>
+              <h3>Fight Club</h3>
+              <div class="watchlist-rating">
+                <i class="fas fa-star"></i>
+                <span>8.8/10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="settings">
+          <h2>Account Settings</h2>
+          <div class="settings-section">
+            <h3>Notification Preferences</h3>
+            <div class="setting-option">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+              <span>Email notifications for new releases</span>
+            </div>
+            <div class="setting-option">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+              <span>Booking confirmations</span>
+            </div>
+            <div class="setting-option">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span>Marketing emails</span>
+            </div>
+          </div>
+          <div class="settings-section">
+            <h3>Privacy Settings</h3>
+            <div class="setting-option">
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+              <span>Show my activity to friends</span>
+            </div>
+            <div class="setting-option">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span>Allow location tracking</span>
+            </div>
+          </div>
+          <div class="settings-section">
+            <h3>Account Actions</h3>
+            <button class="btn danger-btn">Change Password</button>
+            <button class="btn danger-btn">Delete Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Locations</h3>
+          <a href="#">Bengaluru</a>
+          <a href="#">Delhi</a>
+          <a href="#">Indore</a>
+          <a href="#">Mumbai</a>
+          <a href="#">Pune</a>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">Book</a>
+          <a href="./about.html">About Us</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="box">
+          <h3>Follow us</h3>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Linkedin</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        <span class="first-word">Fingertip</span>
+        <span class="second-word">Movies </span>| All rights reserved!
+      </div>
+    </section>
+
+    <script>
+      // Tab switching functionality
+      document.querySelectorAll(".tab-btn").forEach(button => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons and content
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach(btn => btn.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach(content => content.classList.remove("active"));
+
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          // Show corresponding content
+          const tabId = button.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+
+      // Animation for save button
+      const saveBtn = document.querySelector(".save-btn");
+      if (saveBtn) {
+        saveBtn.addEventListener("click", function () {
+          this.classList.add("saved");
+          this.textContent = "Saved!";
+
+          setTimeout(() => {
+            this.classList.remove("saved");
+            this.textContent = "Save Changes";
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>

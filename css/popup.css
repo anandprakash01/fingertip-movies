@@ -1,0 +1,194 @@
+/* -------------popup styles-------------- */
+
+/* Movie description popup */
+
+.popup-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  z-index: 50;
+}
+.description-popup {
+  background-color: #1b1b1b;
+  color: white;
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  border-radius: 6px;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  transform: scale(0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.open-popup {
+  visibility: hidden;
+}
+
+.description-popup img {
+  padding: 0.7rem;
+  object-fit: cover;
+  width: 14rem;
+  height: 19rem;
+  border-radius: 0.5rem;
+}
+
+.movie-details {
+  padding: 0 2rem;
+}
+
+.movie-details .popup-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.7rem;
+  color: red;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.close:hover {
+  font-weight: 700;
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+
+.movie-details .popup-lang {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details .popup-rating {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details .popup-detail {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* Booking popup styles */
+.book-popup {
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: scale(0.1);
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.book-popup .close {
+  top: 2%;
+  left: 93%;
+}
+
+.book-popup h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.book-popup h1 + div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.book-popup form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 18rem;
+  gap: 1rem;
+}
+
+.book-popup form h2 {
+  margin-bottom: 1rem;
+  color: #dd7200;
+  font-size: 1.4rem;
+}
+
+.book-popup .form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.book-popup .form-group label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.book-popup .form-group input {
+  height: 2rem;
+  border-radius: 0.2rem;
+  border: 1px solid orange;
+  padding-left: 0.5rem;
+}
+
+.book-popup .form-group input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+.book-popup form .radio-btn .form-group {
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+.book-popup form .radio-btn .form-group input {
+  height: 0.8rem;
+}
+
+.book-popup form .radio-btn .form-group input:hover {
+  cursor: pointer;
+}
+
+.book-popup form .radio-btn .form-group label:hover {
+  cursor: pointer;
+  user-select: none;
+}
+
+.paybtn {
+  text-align: center;
+}
+
+.paybtn #pay {
+  width: 10rem;
+  margin: 1.5rem 0;
+}
+
+.book-popup .summary h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.book-popup .summary div {
+  margin: 0.3rem 0;
+  font-weight: 300;
+}

@@ -1,109 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fingertip Movies</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- <link rel="stylesheet" media="screen and (max-width: 700px)" href="./phone.css"> -->
-    <link rel="stylesheet" href="./mediaquery.css">
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS references -->
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <link rel="stylesheet" href="./css/mediaquery.css" />
 
-    <script defer src="./App.js"></script>
-</head>
+    <!-- Updated JS reference to use modules -->
+    <script type="module" src="./js/main.js" defer></script>
+    <!-- Add this in the head section, before your other CSS links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="nav-bar">
-        <div id="home-logo">
-            <a href="./index.html">
-                <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
-            </a>
-        </div>
-        <div id="nav-search">
-            <input type="text" id="search" placeholder="What are you looking for? ">
-            <button class="btn book-now" onclick="bookinPopup()">Book Now</button>
-        </div>
+      <div id="home-logo">
+        <a href="./index.html">
+          <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
+        </a>
+      </div>
+      <div id="nav-search">
+        <input type="text" id="search" placeholder="What are you looking for? " />
+        <button class="btn book-now" onclick="bookingPopup()">Book Now</button>
+        <a href="./profile.html" class="profile-icon">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
     </nav>
 
     <div class="book-popup open-popup" id="booking">
-        <button class="close" id="booking-close">X</button>
-        <h1>Checkout</h1>
-        <div>
-            <form>
-                <h2>Payment</h2>
-                <div class="form-group">
-                    <label for="firstname">First Name* </label>
-                    <input id="firstname" placeholder="First Name">
-                </div>
+      <button class="close" id="booking-close">X</button>
+      <h1>Checkout</h1>
+      <div>
+        <form>
+          <h2>Payment</h2>
+          <div class="form-group">
+            <label for="firstname">First Name* </label>
+            <input id="firstname" placeholder="First Name" />
+          </div>
 
-                <div class="form-group">
-                    <label for="lastname">Last Name* </label>
-                    <input id="lastname" placeholder="Last Name">
-                </div>
+          <div class="form-group">
+            <label for="lastname">Last Name* </label>
+            <input id="lastname" placeholder="Last Name" />
+          </div>
 
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input id="email" placeholder="First Name">
-                </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input id="email" placeholder="First Name" />
+          </div>
 
-                <div class="radio-btn">
-                    <p>Select a Payment Method</p>
-                    <div class="form-group">
-                        <input type="radio" id="creditcard" name="payment-method" value="creditcard">
-                        <label for="creditcard">Credit Card</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="radio" id="dabitcard" name="payment-method" value="dabitcard">
-                        <label for="dabitcard">Dabit Card</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="radio" id="upi" name="payment-method" value="upi">
-                        <label for="upi">UPI</label>
-                    </div>
-
-                </div>
-
-            </form>
-
-            <div class="summary">
-                <h2>Select movie</h2>
-                <div>No of ticket : </div>
-                <div>Convenience fee + GST (18.6%)</div>
-                <div>Sub total :</div>
+          <div class="radio-btn">
+            <p>Select a Payment Method</p>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="creditcard"
+                name="payment-method"
+                value="creditcard"
+              />
+              <label for="creditcard">Credit Card</label>
             </div>
 
+            <div class="form-group">
+              <input
+                type="radio"
+                id="dabitcard"
+                name="payment-method"
+                value="dabitcard"
+              />
+              <label for="dabitcard">Dabit Card</label>
+            </div>
+
+            <div class="form-group">
+              <input type="radio" id="upi" name="payment-method" value="upi" />
+              <label for="upi">UPI</label>
+            </div>
+          </div>
+        </form>
+
+        <div class="summary">
+          <h2>Select movie</h2>
+          <div>No of ticket :</div>
+          <div>Convenience fee + GST (18.6%)</div>
+          <div>Sub total :</div>
         </div>
-        <div class="paybtn">
-            <button id="pay" class="btn book-now">Proceed to pay</button>
-        </div>
+      </div>
+      <div class="paybtn">
+        <button id="pay" class="btn book-now">Proceed to pay</button>
+      </div>
     </div>
 
-
     <div id="genres-section">
-        <div id="tags">
-
-            <!-- <div class="genres-types">Action</div> -->
-
-        </div>
+      <div id="tags">
+        <!-- <div class="genres-types">Action</div> -->
+      </div>
     </div>
 
     <div class="main-page">
-        <div class="book-ticket">
-            <div>Book your favorite movie now</div>
-        </div>
-        <div id="movies-container">
-
-            <!-- <div class="movie-card">
+      <div class="book-ticket">
+        <div>Book your favorite movie now</div>
+      </div>
+      <div id="movies-container">
+        <!-- <div class="movie-card">
                 <img src="./photo.jpg">
                 <div class="movie-name">Movie Namsse</div>
                 <div class="movie-lang">
@@ -115,13 +125,12 @@
                     <span></span>
                 </div>
             </div> -->
-
-        </div>
-        <div id="popup">
-            <!-- <div class="disciption-popup">
+      </div>
+      <div id="popup">
+        <!-- <div class="disciption-popup">
                 <img src="./photo.jpg">
                 <div class="movie-details">
-                    <div class="popup-name">Movie Namsse</div>
+                    <div class="popup-name">Movie Name</div>
                     <button class="close">X</button>
                     <div class="popup-lang">En</div>
                     <div class="popup-rating">7.2/10</div>
@@ -131,54 +140,47 @@
                     <button class="btn book-now popup-btn">Book Now</button>
                 </div>
             </div> -->
-        </div>
+      </div>
 
-        <div id="pagination-section">
-            <div id="prev" class="page">Previous Page</div>
-            <div id="current" class="current">1</div>
-            <div id="next" class="page">Next Page</div>
-        </div>
-
+      <div id="pagination-section">
+        <div id="prev" class="page">Previous Page</div>
+        <div id="current" class="current">1</div>
+        <div id="next" class="page">Next Page</div>
+      </div>
     </div>
 
+    <!-- Keep all the existing content until the footer section -->
+
     <section class="footer">
-        <div class="box-container">
-            <div id="about-us" class="box">
-                <h3>About us</h3>
-                <p>
-                    Fingertip Movies is an online movie booking platform.. It has a huge collection of latest movies and
-                    films. It is available in many locations so you can choose a location and book anywhere. So the next
-                    time when you want to book a movie don't go anywhere just visit our site and get your job done.
-                </p>
-            </div>
-            <div class="box">
-                <h3>Loctions</h3>
-                <a href="#">Delhi</a>
-                <a href="#">Mumbai</a>
-                <a href="#">Pune</a>
-                <a href="#">Bangalore</a>
-            </div>
-            <div class="box">
-                <h3>Quick Links</h3>
-                <a href="#">Home</a>
-                <a href="#" onclick="bookinPopup()">Book</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="box">
-                <h3>Follow us</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Linkedin</a>
-            </div>
-
+      <div class="box-container">
+        <div class="box">
+          <h3>Locations</h3>
+          <a href="#">Bengaluru</a>
+          <a href="#">Delhi</a>
+          <a href="#">Indore</a>
+          <a href="#">Mumbai</a>
+          <a href="#">Pune</a>
         </div>
-
-        <div class="credit">
-            <span class="first-word">Fingertip</span> <span class="second-word">Movies </span>| All rights reserved!
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">Book</a>
+          <a href="./about.html">About Us</a>
+          <a href="#">Contact Us</a>
         </div>
+        <div class="box">
+          <h3>Follow us</h3>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Linkedin</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        <span class="first-word">Fingertip</span>
+        <span class="second-word">Movies </span>| All rights reserved!
+      </div>
     </section>
-</body>
-
+  </body>
 </html>

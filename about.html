@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Fingertip Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS references -->
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <link rel="stylesheet" href="./css/mediaquery.css" />
+
+    <!-- Updated JS reference to use modules -->
+    <script type="module" src="./js/main.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="nav-bar">
+      <div id="home-logo">
+        <a href="./index.html">
+          <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
+        </a>
+      </div>
+      <div id="nav-search">
+        <input type="text" id="search" placeholder="What are you looking for? " />
+        <button class="btn book-now" onclick="bookingPopup()">Book Now</button>
+      </div>
+    </nav>
+
+    <div class="about-container">
+      <h1>About Us</h1>
+      <div class="about-content">
+        <img src="./screenshots/logo.png" alt="Fingertip Movies Logo" class="about-logo">
+        <p>
+          Fingertip Movies is an online movie booking platform. It has a huge
+          collection of latest movies and films. It is available in many locations so
+          you can choose a location and book anywhere.
+        </p>
+        <p>
+          Our mission is to provide a seamless movie booking experience for all movie enthusiasts.
+          With our user-friendly interface, you can easily browse through the latest releases,
+          check ratings, read descriptions, and book your tickets in just a few clicks.
+        </p>
+        <p>
+          We partner with theaters across the country to bring you the best movie-watching experience.
+          From blockbuster hits to indie gems, we've got it all covered.
+        </p>
+        <p>
+          So the next time when you want to book a movie don't go anywhere just visit our site
+          and get your job done.
+        </p>
+        <h2>Our Features</h2>
+        <ul>
+          <li>Browse latest movies with detailed information</li>
+          <li>Filter movies by genre</li>
+          <li>Easy booking process</li>
+          <li>Available in multiple locations</li>
+          <li>Secure payment options</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Locations</h3>
+          <a href="#">Delhi</a>
+          <a href="#">Mumbai</a>
+          <a href="#">Pune</a>
+          <a href="#">Bangalore</a>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="./index.html">Home</a>
+          <a href="#" onclick="bookingPopup()">Book</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="box">
+          <h3>Follow us</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Linkedin</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        <span class="first-word">Fingertip</span>
+        <span class="second-word">Movies </span>| All rights reserved!
+      </div>
+    </section>
+  </body>
+</html>
