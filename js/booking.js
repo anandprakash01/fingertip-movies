@@ -33,7 +33,6 @@ const formattedDate = today.toISOString().split("T")[0];
 showDate.value = formattedDate;
 showDate.min = formattedDate;
 
-// function to fetch movies for the booking page
 async function fetchMovies(url) {
   try {
     const response = await fetch(url);
@@ -80,7 +79,7 @@ movieSearch.addEventListener("input", () => {
   if (searchTxt) {
     fetchMovies(search_URL + "&query=" + searchTxt);
   } else {
-    fetchMovies(API_URL);
+    moviesList.innerHTML = "";
   }
 });
 
@@ -109,7 +108,6 @@ function displayMoviesList(movies) {
     `;
 
     movieItem.addEventListener("click", () => {
-      // Set selected movie with all required properties
       selectedMovie = {
         id: movie.id,
         title: movie.title,
@@ -119,14 +117,15 @@ function displayMoviesList(movies) {
         release_date: movie.release_date || "N/A",
       };
 
-      // Update UI
       document.querySelectorAll(".movie-item").forEach(item => {
         item.classList.remove("selected");
       });
       movieItem.classList.add("selected");
 
-      // Display selected movie details
       displaySelectedMovie();
+      
+      movieSearch.value = "";
+      moviesList.innerHTML = "";
     });
 
     moviesList.appendChild(movieItem);
