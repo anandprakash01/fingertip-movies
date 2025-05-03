@@ -1,5 +1,4 @@
 import {API_URL, IMG_URL, search_URL} from "./config.js";
-import {bookingPopup} from "./popup.js";
 
 // DOM Elements
 const movieContainer = document.getElementById("movies-container");
@@ -25,7 +24,7 @@ function getMovies(url) {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       if (data.results.length != 0) {
         showMovies(data.results);
         currentPage = data.page;
