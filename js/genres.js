@@ -1,9 +1,9 @@
 // Import dependencies
-import {API_URL} from "./config.js";
+import {API_KEY, BASE_URL, API_URL} from "./config.js";
 import {getMovies} from "./movies.js";
 
 // DOM Elements
-const tagsEl = document.getElementById("tags");
+let tagsEl;
 
 // Genres data
 const genres = [
@@ -31,10 +31,20 @@ const genres = [
 // Variables
 let selectedGenres = [];
 
-// Initialize
-setGenres();
+// Initialize when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  tagsEl = document.getElementById("tags");
+  if (tagsEl) {
+    setGenres();
+    console.log("Genres initialized");
+  } else {
+    console.error("Tags element not found");
+  }
+});
 
 function setGenres() {
+  if (!tagsEl) return;
+
   tagsEl.innerHTML = "";
   genres.forEach(genre => {
     const t = document.createElement("div");
@@ -56,7 +66,14 @@ function setGenres() {
           selectedGenres.push(genre.id);
         }
       }
-      getMovies(API_URL + "&with_genres=" + encodeURI(selectedGenres.join("||")));
+      // Use the discover endpoint instead of now_playing for genre filtering
+      const genreURL =
+        BASE_URL +
+        "/discover/movie?" +
+        API_KEY +
+        "&with_genres=" +
+        selectedGenres.join(",");
+      getMovies(genreURL);
       HighlightSelectedGenre();
     });
   });
@@ -96,5 +113,4 @@ function clearBtn() {
   }
 }
 
-// Export functions and variables for use in other modules
 export {setGenres, HighlightSelectedGenre, clearBtn, selectedGenres};

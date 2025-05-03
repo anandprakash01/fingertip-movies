@@ -1,107 +1,116 @@
-/*low resolution tablet and ipad*/
-@media (max-width: 767px) {
+/* Small mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 60%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 95%;
+    min-height: auto;
+  }
+
+  #home-logo {
+    margin: 0.3rem auto;
+    text-align: center;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.4rem;
+    padding: 0.2rem 0;
+  }
+
+  #search,
+  #theater-search {
+    width: 100%;
+    max-width: 100%;
+    margin: 0.1rem 0;
+  }
+
+  .nav-link,
+  .btn.book-now {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin: 0.1rem 0;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .btn.book-now {
+    max-width: 100%;
+  }
+}
+
+/* Medium mobile devices and small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
   html {
     font-size: 70%;
   }
+
   .nav-bar {
     flex-direction: column;
-  }
-  #nav-search {
-    margin-bottom: 1rem;
-  }
-
-  #nav-search input {
-    margin: 0;
-  }
-  #nav-search button {
-    margin-right: 0;
-    margin-left: 0.5rem;
-  }
-  #home-logo #first-word {
-    margin-left: 0;
+    padding: 0.6rem;
+    min-height: auto;
   }
 
-  .book-popup .close {
-    top: 2%;
-    left: 87%;
-  }
-  .book-popup h1 + div {
-    flex-direction: column;
-    align-items: center;
-  }
-  .book-popup form,
-  .book-popup .summary {
-    width: 100%;
-  }
-  .footer .box-container .box h3 {
-    font-size: 1.1rem;
+  #home-logo {
+    margin: 0 auto 0.3rem;
+    text-align: center;
   }
 
-  @keyframes left-to-right {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: -55%;
-    }
-  }
-  .description-popup {
-    flex-direction: column;
+  #nav-links {
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    width: 75%;
-    top: 25%;
-    left: 14%;
-    padding: 1rem 0;
-  }
-  .book-popup {
-    top: 15%;
-    left: 14%;
-    width: 75%;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.2rem 0;
   }
 
-  .book-ticket div {
-    animation-duration: 8s;
+  #search,
+  #theater-search {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.1rem 0;
   }
 }
 
-/*portrait mode tablet and ipad*/
+/* Tablets and iPads */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .book-popup .close {
-    left: 90%;
+  .nav-bar {
+    padding: 0 0.8rem;
+    min-height: 4rem;
   }
-  .description-popup img {
-    width: 10rem;
-    height: 12rem;
+
+  #nav-links {
+    gap: 0.5rem;
+    padding: 0.2rem 0;
   }
-  .description-popup {
-    width: 75%;
-    top: 25%;
-    left: 14%;
+
+  #search,
+  #theater-search {
+    width: 180px;
   }
-  @keyframes left-to-right {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: -40%;
-    }
-  }
-  .book-ticket div {
-    animation-duration: 10s;
+
+  .nav-link {
+    padding: 0.4rem 0.7rem;
+    margin: 0.1rem 0;
   }
 }
 
-/*laptop*/
+/* Keep other media queries as they are */
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .nav-bar {
+    padding: 0 1.5rem;
+  }
+
+  #nav-links {
+    gap: 1rem;
+  }
 }
 
-/*large screen*/
+/* Large screens */
 @media (min-width: 1281px) {
-  .book-popup form {
-    width: 30rem;
-  }
-  .book-popup .close {
-    left: 94%;
-  }
 }

@@ -1,4 +1,3 @@
-// Import configuration
 import {API_URL, IMG_URL, search_URL} from "./config.js";
 import {bookingPopup} from "./popup.js";
 
@@ -19,7 +18,6 @@ let prevPage = 0;
 let lastURL = "";
 let totalPages = 10;
 
-// Initialize
 getMovies(API_URL);
 
 function getMovies(url) {
@@ -135,7 +133,6 @@ function showMovies(data) {
   });
 }
 
-// Export functions and variables for use in other modules
 export {
   getMovies,
   showMovies,

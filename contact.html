@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Fingertip Movies</title>
+    <title>Contact Us - Fingertip Movies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/popup.css" />
     <link rel="stylesheet" href="./css/mediaquery.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link
@@ -48,41 +49,56 @@
       </div>
     </nav>
 
-    <div class="about-container">
-      <h1>About Us</h1>
-      <div class="about-content">
-        <img
-          src="./screenshots/logo.png"
-          alt="Fingertip Movies Logo"
-          class="about-logo"
-        />
-        <p>
-          Fingertip Movies is an online movie booking platform. It has a huge collection
-          of latest movies and films. It is available in many locations so you can choose
-          a location and book anywhere.
-        </p>
-        <p>
-          Our mission is to provide a seamless movie booking experience for all movie
-          enthusiasts. With our user-friendly interface, you can easily browse through the
-          latest releases, check ratings, read descriptions, and book your tickets in just
-          a few clicks.
-        </p>
-        <p>
-          We partner with theaters across the country to bring you the best movie-watching
-          experience. From blockbuster hits to indie gems, we've got it all covered.
-        </p>
-        <p>
-          So the next time when you want to book a movie don't go anywhere just visit our
-          site and get your job done.
-        </p>
-        <h2>Our Features</h2>
-        <ul>
-          <li>Browse latest movies with detailed information</li>
-          <li>Filter movies by genre</li>
-          <li>Easy booking process</li>
-          <li>Available in multiple locations</li>
-          <li>Secure payment options</li>
-        </ul>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Address</h3>
+              <p>123 ABC Road, Indore 452003</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>+91 7047xxxx12</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>contact@fingertip-movies.com</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
       </div>
     </div>
 

@@ -4,26 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Fingertip Movies</title>
+    <title>Theaters - Fingertip Movies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Delicious+Handrawn&family=Inter:wght@200;400&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     />
-    <!-- CSS references -->
-    <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/popup.css" />
-    <link rel="stylesheet" href="./css/mediaquery.css" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/theaters.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/mediaquery.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
 
-    <!-- Updated JS reference to use modules -->
-    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" defer src="./js/theaters.js"></script>
   </head>
 
   <body>
@@ -34,13 +32,9 @@
         </a>
       </div>
       <div id="nav-links">
-        <input type="text" id="search" placeholder="What are you looking for? " />
         <a href="./index.html" class="nav-link"> <i class="fas fa-home"></i> Home </a>
         <a href="./booking.html" class="btn book-now">
           <i class="fas fa-ticket-alt"></i> Book Now
-        </a>
-        <a href="./theaters.html" class="nav-link">
-          <i class="fas fa-film"></i> Theaters
         </a>
         <a href="./profile.html" class="nav-link">
           <i class="fas fa-user-circle"></i> Profile
@@ -48,42 +42,30 @@
       </div>
     </nav>
 
-    <div class="about-container">
-      <h1>About Us</h1>
-      <div class="about-content">
-        <img
-          src="./screenshots/logo.png"
-          alt="Fingertip Movies Logo"
-          class="about-logo"
-        />
-        <p>
-          Fingertip Movies is an online movie booking platform. It has a huge collection
-          of latest movies and films. It is available in many locations so you can choose
-          a location and book anywhere.
-        </p>
-        <p>
-          Our mission is to provide a seamless movie booking experience for all movie
-          enthusiasts. With our user-friendly interface, you can easily browse through the
-          latest releases, check ratings, read descriptions, and book your tickets in just
-          a few clicks.
-        </p>
-        <p>
-          We partner with theaters across the country to bring you the best movie-watching
-          experience. From blockbuster hits to indie gems, we've got it all covered.
-        </p>
-        <p>
-          So the next time when you want to book a movie don't go anywhere just visit our
-          site and get your job done.
-        </p>
-        <h2>Our Features</h2>
-        <ul>
-          <li>Browse latest movies with detailed information</li>
-          <li>Filter movies by genre</li>
-          <li>Easy booking process</li>
-          <li>Available in multiple locations</li>
-          <li>Secure payment options</li>
-        </ul>
+    <div class="theaters-container">
+      <h1>Theaters</h1>
+
+      <div class="theater-search-container">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="theater-search" placeholder="Search theaters..." />
+        </div>
       </div>
+
+      <div class="location-filter">
+        <h3>Select Location:</h3>
+        <div class="location-buttons">
+          <button class="location-btn active" data-location="all">All</button>
+          <button class="location-btn" data-location="Delhi">Delhi</button>
+          <button class="location-btn" data-location="Mumbai">Mumbai</button>
+          <button class="location-btn" data-location="Pune">Pune</button>
+          <button class="location-btn" data-location="Bangalore">Bangalore</button>
+          <button class="location-btn" data-location="Indore">Indore</button>
+        </div>
+      </div>
+
+      <!-- This div was missing - it's where theaters are displayed -->
+      <div id="theaters-list"></div>
     </div>
 
     <section class="footer">
@@ -99,9 +81,9 @@
         <div class="box">
           <h3>Quick Links</h3>
           <a href="./index.html">Home</a>
-          <a href="./booking.html">Book</a>
+          <a href="./book.html">Book</a>
           <a href="./about.html">About Us</a>
-          <a href="./contact.html">Contact Us</a>
+          <a href="./about.html">Contact Us</a>
         </div>
         <div class="box">
           <h3>Follow us</h3>

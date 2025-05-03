@@ -1,4 +1,3 @@
-
 /* Profile Icon in Navbar */
 .profile-icon {
   display: flex;
@@ -353,10 +352,15 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Fix for booking images */
 .booking-poster {
   width: 120px;
   height: 180px;
   overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .booking-poster img {
@@ -366,50 +370,20 @@
   transition: transform 0.3s ease;
 }
 
-.booking-card:hover .booking-poster img {
-  transform: scale(1.1);
+/* Fix for watchlist images */
+.watchlist-poster {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 0.3rem 0.3rem 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.booking-details {
-  padding: 1rem;
-  flex: 1;
-}
-
-.booking-details h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.booking-details p {
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
-  color: #ddd;
-}
-
-.booking-status {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 2rem;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-}
-
-.booking-status.completed {
-  background-color: #208200;
-  color: white;
-}
-
-.booking-status.upcoming {
-  background-color: #cdcc00;
-  color: black;
-}
-
-/* Watchlist Styles */
-.watchlist-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+.watchlist-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .watchlist-card {
@@ -418,17 +392,153 @@
   overflow: hidden;
   transition: all 0.3s ease;
   animation: fadeInScale 0.5s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes fadeInScale {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.watchlist-card h3 {
+  padding: 0.8rem 1rem 0.4rem;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watchlist-rating {
+  padding: 0 1rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.watchlist-rating i {
+  color: #cdcc00;
+}
+
+.settings-section:last-child {
+  display: block;
+}
+.settings-section {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.settings-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #cdcc00;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+.setting-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.setting-option span {
+  margin-left: 1rem;
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+
+/* Hide the checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #373737;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #cdcc00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(12px);
+}
+
+.danger-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.danger-btn:hover {
+  background-color: #f40612;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Add responsive styling for account actions section */
+.settings-section:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .watchlist-card:hover {
@@ -486,4 +596,162 @@
   color: #cdcc00;
 }
 
-/* .watchlist-card h3; */
+.no-history-message,
+.no-watchlist-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-history-message i,
+.no-watchlist-message i {
+  font-size: 3rem;
+  color: #cdcc00;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.no-history-message p,
+.no-watchlist-message p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.no-history-message span,
+.no-watchlist-message span {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Contact Us Section */
+.contact-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #1b1b1b;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #cdcc00;
+  text-align: center;
+  font-family: "Alkatra", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #cdcc00;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.contact-item p {
+  color: #aaa;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #cdcc00;
+  box-shadow: 0 0 0 2px rgba(205, 204, 0, 0.2);
+}
+
+.contact-form .submit-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #f40612;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for contact section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}

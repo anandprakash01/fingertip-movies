@@ -1,0 +1,127 @@
+.nav-bar {
+  width: 90%;
+  min-height: 4rem;
+  margin: 0 auto;
+  background-color: #373737;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 1.4rem 1.4rem;
+  padding: 0 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+}
+
+#home-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+#first-word {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Alkatra", cursive;
+}
+
+#second-word {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Alkatra", cursive;
+}
+
+#nav-search,
+#nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.3rem 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  margin: 0.15rem 0;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  background-color: #208200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn.book-now {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0.15rem 0.6rem;
+  white-space: nowrap;
+  text-decoration: none;
+  max-width: 110px;
+  justify-content: center;
+}
+
+.btn.book-now i {
+  font-size: 0.9rem;
+}
+
+.btn.book-now:hover {
+  background-color: #f40612;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.book-now:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#search,
+#theater-search {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 200px;
+  transition: all 0.3s ease;
+  margin: 0.15rem 0;
+}
+
+#search:focus,
+#theater-search:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.5);
+}

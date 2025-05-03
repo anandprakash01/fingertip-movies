@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/popup.css" />
     <link rel="stylesheet" href="./css/mediaquery.css" />
     <link rel="stylesheet" href="./css/profile.css" />
-
+    <link rel="stylesheet" href="./css/navbar.css" />
     <!-- Updated JS reference to use modules -->
     <script type="module" src="./js/main.js" defer></script>
   </head>
@@ -32,11 +32,13 @@
           <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
         </a>
       </div>
-      <div id="nav-search">
-        <input type="text" id="search" placeholder="What are you looking for? " />
-        <button class="btn book-now" onclick="bookingPopup()">Book Now</button>
-        <a href="./profile.html" class="profile-icon active">
-          <i class="fas fa-user-circle"></i>
+      <div id="nav-links">
+        <a href="./index.html" class="nav-link"> <i class="fas fa-home"></i> Home </a>
+        <a href="./theaters.html" class="nav-link">
+          <i class="fas fa-film"></i> Theaters
+        </a>
+        <a href="./booking.html" class="btn book-now">
+          <i class="fas fa-ticket-alt"></i> Book Now
         </a>
       </div>
     </nav>
@@ -112,44 +114,10 @@
         <div class="tab-content" id="booking-history">
           <h2>Your Booking History</h2>
           <div class="booking-list">
-            <div class="booking-card">
-              <div class="booking-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-              </div>
-              <div class="booking-details">
-                <h3>Avengers: Endgame</h3>
-                <p><strong>Date:</strong> 15 May 2023</p>
-                <p><strong>Time:</strong> 7:30 PM</p>
-                <p><strong>Seats:</strong> J12, J13</p>
-                <p><strong>Total:</strong> $24.00</p>
-                <div class="booking-status completed">Completed</div>
-              </div>
-            </div>
-            <div class="booking-card">
-              <div class="booking-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-              </div>
-              <div class="booking-details">
-                <h3>The Batman</h3>
-                <p><strong>Date:</strong> 28 April 2023</p>
-                <p><strong>Time:</strong> 9:00 PM</p>
-                <p><strong>Seats:</strong> F5, F6, F7</p>
-                <p><strong>Total:</strong> $36.00</p>
-                <div class="booking-status completed">Completed</div>
-              </div>
-            </div>
-            <div class="booking-card">
-              <div class="booking-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-              </div>
-              <div class="booking-details">
-                <h3>Dune</h3>
-                <p><strong>Date:</strong> 10 June 2023</p>
-                <p><strong>Time:</strong> 6:15 PM</p>
-                <p><strong>Seats:</strong> D8, D9</p>
-                <p><strong>Total:</strong> $24.00</p>
-                <div class="booking-status upcoming">Upcoming</div>
-              </div>
+            <div class="no-history-message">
+              <i class="fas fa-ticket-alt"></i>
+              <p>No booking history found</p>
+              <span>Your movie booking history will appear here</span>
             </div>
           </div>
         </div>
@@ -158,75 +126,10 @@
         <div class="tab-content" id="watchlist">
           <h2>Your Watchlist</h2>
           <div class="watchlist-grid">
-            <div class="watchlist-card">
-              <div class="watchlist-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-                <div class="watchlist-actions">
-                  <button class="action-btn"><i class="fas fa-trash"></i></button>
-                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
-                </div>
-              </div>
-              <h3>Inception</h3>
-              <div class="watchlist-rating">
-                <i class="fas fa-star"></i>
-                <span>8.8/10</span>
-              </div>
-            </div>
-            <div class="watchlist-card">
-              <div class="watchlist-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-                <div class="watchlist-actions">
-                  <button class="action-btn"><i class="fas fa-trash"></i></button>
-                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
-                </div>
-              </div>
-              <h3>The Shawshank Redemption</h3>
-              <div class="watchlist-rating">
-                <i class="fas fa-star"></i>
-                <span>9.3/10</span>
-              </div>
-            </div>
-            <div class="watchlist-card">
-              <div class="watchlist-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-                <div class="watchlist-actions">
-                  <button class="action-btn"><i class="fas fa-trash"></i></button>
-                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
-                </div>
-              </div>
-              <h3>The Dark Knight</h3>
-              <div class="watchlist-rating">
-                <i class="fas fa-star"></i>
-                <span>9.0/10</span>
-              </div>
-            </div>
-            <div class="watchlist-card">
-              <div class="watchlist-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-                <div class="watchlist-actions">
-                  <button class="action-btn"><i class="fas fa-trash"></i></button>
-                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
-                </div>
-              </div>
-              <h3>Pulp Fiction</h3>
-              <div class="watchlist-rating">
-                <i class="fas fa-star"></i>
-                <span>8.9/10</span>
-              </div>
-            </div>
-            <div class="watchlist-card">
-              <div class="watchlist-poster">
-                <img src="./screenshots/moviePopup.png" alt="Movie Poster" />
-                <div class="watchlist-actions">
-                  <button class="action-btn"><i class="fas fa-trash"></i></button>
-                  <button class="action-btn"><i class="fas fa-ticket-alt"></i></button>
-                </div>
-              </div>
-              <h3>Fight Club</h3>
-              <div class="watchlist-rating">
-                <i class="fas fa-star"></i>
-                <span>8.8/10</span>
-              </div>
+            <div class="no-watchlist-message">
+              <i class="fas fa-film"></i>
+              <p>Your watchlist is empty</p>
+              <span>Movies you add to your watchlist will appear here</span>
             </div>
           </div>
         </div>
@@ -288,31 +191,32 @@
       <div class="box-container">
         <div class="box">
           <h3>Locations</h3>
-          <a href="#">Bengaluru</a>
-          <a href="#">Delhi</a>
-          <a href="#">Indore</a>
-          <a href="#">Mumbai</a>
-          <a href="#">Pune</a>
+          <a href="./theaters.html">Bengaluru</a>
+          <a href="./theaters.html">Delhi</a>
+          <a href="./theaters.html">Indore</a>
+          <a href="./theaters.html">Mumbai</a>
+          <a href="./theaters.html">Pune</a>
         </div>
         <div class="box">
           <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="#">Book</a>
+          <a href="./index.html">Home</a>
+          <a href="./booking.html">Book</a>
           <a href="./about.html">About Us</a>
-          <a href="#">Contact Us</a>
+          <a href="./profile.html">Contact Us</a>
         </div>
         <div class="box">
           <h3>Follow us</h3>
           <a href="#">Instagram</a>
           <a href="#">Twitter</a>
-          <a href="#">Linkedin</a>
-          <a href="#">GitHub</a>
+          <a href="https://www.linkedin.com/in/anandprakash21/">Linkedin</a>
+          <a href="https://github.com/anandprakash01">GitHub</a>
         </div>
       </div>
 
       <div class="credit">
         <span class="first-word">Fingertip</span>
-        <span class="second-word">Movies </span>| All rights reserved!
+        <span class="second-word">Movies </span>| All rights reserved! | copyright &copy;
+        2023
       </div>
     </section>
 

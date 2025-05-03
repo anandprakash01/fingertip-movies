@@ -1,12 +1,11 @@
-// Import dependencies
-import { getMovies } from './movies.js';
+import {getMovies} from "./movies.js";
 
 // DOM Elements
 const prevEl = document.getElementById("prev");
 const nextEl = document.getElementById("next");
 
 // Variables from movies.js
-import { lastURL, currentPage, nextPage, prevPage, totalPages } from './movies.js';
+import {lastURL, currentPage, nextPage, prevPage, totalPages} from "./movies.js";
 
 // Event listeners for pagination
 prevEl.addEventListener("click", () => {

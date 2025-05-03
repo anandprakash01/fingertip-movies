@@ -199,8 +199,51 @@ body {
   background-color: #1b1b1b;
   border-radius: 0.5rem;
 }
+/* No Results Found styling */
 .no-result {
-  margin: 70px 0;
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.no-result::before {
+  content: "🎬";
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.no-result::after {
+  content: "Try a different search term";
+  display: block;
+  font-size: 1rem;
+  color: #cdcc00;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .movie-card {
   margin: 1rem 0.5rem;
@@ -225,7 +268,7 @@ body {
   margin: auto;
 }
 
-.movie-card img:hover {
+.movie-card:hover img {
   padding: 0;
   transition: all 0.3s;
 }

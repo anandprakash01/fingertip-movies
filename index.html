@@ -14,14 +14,18 @@
       rel="stylesheet"
     />
     <!-- CSS references -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/popup.css" />
     <link rel="stylesheet" href="./css/mediaquery.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
 
     <!-- Updated JS reference to use modules -->
     <script type="module" src="./js/main.js" defer></script>
-    <!-- Add this in the head section, before your other CSS links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
 
   <body>
@@ -31,11 +35,16 @@
           <span id="first-word">Fingertip</span> <span id="second-word">Movies</span>
         </a>
       </div>
-      <div id="nav-search">
+      <div id="nav-links">
         <input type="text" id="search" placeholder="What are you looking for? " />
-        <button class="btn book-now" onclick="bookingPopup()">Book Now</button>
-        <a href="./profile.html" class="profile-icon">
-          <i class="fas fa-user-circle"></i>
+        <a href="./booking.html" class="btn book-now">
+          <i class="fas fa-ticket-alt"></i> Book Now
+        </a>
+        <a href="./theaters.html" class="nav-link">
+          <i class="fas fa-film"></i> Theaters
+        </a>
+        <a href="./profile.html" class="nav-link">
+          <i class="fas fa-user-circle"></i> Profile
         </a>
       </div>
     </nav>
@@ -80,7 +89,7 @@
                 name="payment-method"
                 value="dabitcard"
               />
-              <label for="dabitcard">Dabit Card</label>
+              <label for="dabitcard">Debit Card</label>
             </div>
 
             <div class="form-group">
@@ -149,37 +158,36 @@
       </div>
     </div>
 
-    <!-- Keep all the existing content until the footer section -->
-
     <section class="footer">
       <div class="box-container">
         <div class="box">
           <h3>Locations</h3>
-          <a href="#">Bengaluru</a>
-          <a href="#">Delhi</a>
-          <a href="#">Indore</a>
-          <a href="#">Mumbai</a>
-          <a href="#">Pune</a>
+          <a href="./theaters.html">Bengaluru</a>
+          <a href="./theaters.html">Delhi</a>
+          <a href="./theaters.html">Indore</a>
+          <a href="./theaters.html">Mumbai</a>
+          <a href="./theaters.html">Pune</a>
         </div>
         <div class="box">
           <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="#">Book</a>
+          <a href="./index.html">Home</a>
+          <a href="./booking.html">Book</a>
           <a href="./about.html">About Us</a>
-          <a href="#">Contact Us</a>
+          <a href="./contact.html">Contact Us</a>
         </div>
         <div class="box">
           <h3>Follow us</h3>
           <a href="#">Instagram</a>
           <a href="#">Twitter</a>
-          <a href="#">Linkedin</a>
-          <a href="#">GitHub</a>
+          <a href="https://www.linkedin.com/in/anandprakash21/">Linkedin</a>
+          <a href="https://github.com/anandprakash01">GitHub</a>
         </div>
       </div>
 
       <div class="credit">
         <span class="first-word">Fingertip</span>
-        <span class="second-word">Movies </span>| All rights reserved!
+        <span class="second-word">Movies </span>| All rights reserved! | copyright &copy;
+        2023
       </div>
     </section>
   </body>
