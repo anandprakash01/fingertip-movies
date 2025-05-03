@@ -24,7 +24,6 @@
   transform: scale(0.1);
   transition: transform 0.3s ease-in-out;
 }
-
 .open-popup {
   visibility: hidden;
 }
@@ -81,111 +80,55 @@
   margin: 0.5rem 0;
 }
 
-/* Booking popup styles */
-.book-popup {
-  position: fixed;
-  top: 15%;
-  left: 25%;
-  width: 50%;
-  margin: auto;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transform: scale(0.1);
-  transition: transform 0.3s;
-  z-index: 2;
+
+/* Add these media queries for responsive popup */
+@media screen and (max-width: 1024px) {
+  .description-popup {
+    width: 70%;
+    left: 15%;
+  }
 }
 
-.book-popup .close {
-  top: 2%;
-  left: 93%;
+@media screen and (max-width: 768px) {
+  .description-popup {
+    width: 80%;
+    left: 10%;
+    padding: 1.5rem;
+  }
+  
+  .description-popup img {
+    width: 10rem;
+    height: 15rem;
+  }
+  
+  .movie-details {
+    padding: 0 1rem;
+  }
 }
 
-.book-popup h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.book-popup h1 + div {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 2rem;
-}
-
-.book-popup form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 18rem;
-  gap: 1rem;
-}
-
-.book-popup form h2 {
-  margin-bottom: 1rem;
-  color: #dd7200;
-  font-size: 1.4rem;
-}
-
-.book-popup .form-group {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.book-popup .form-group label {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.book-popup .form-group input {
-  height: 2rem;
-  border-radius: 0.2rem;
-  border: 1px solid orange;
-  padding-left: 0.5rem;
-}
-
-.book-popup .form-group input:focus {
-  outline: none;
-  border: 1px solid green;
-}
-
-.book-popup form .radio-btn .form-group {
-  display: inline-block;
-  margin: 0 0.3rem;
-}
-
-.book-popup form .radio-btn .form-group input {
-  height: 0.8rem;
-}
-
-.book-popup form .radio-btn .form-group input:hover {
-  cursor: pointer;
-}
-
-.book-popup form .radio-btn .form-group label:hover {
-  cursor: pointer;
-  user-select: none;
-}
-
-.paybtn {
-  text-align: center;
-}
-
-.paybtn #pay {
-  width: 10rem;
-  margin: 1.5rem 0;
-}
-
-.book-popup .summary h1 {
-  font-size: 1.4rem;
-  text-align: center;
-  margin: 1rem 0;
-  font-weight: 500;
-}
-
-.book-popup .summary div {
-  margin: 0.3rem 0;
-  font-weight: 300;
+@media screen and (max-width: 576px) {
+  .description-popup {
+    width: 90%;
+    left: 5%;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    top: 10%;
+  }
+  
+  .description-popup img {
+    width: 12rem;
+    height: 16rem;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-details {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .movie-details .popup-detail {
+    max-height: 150px;
+    overflow-y: auto;
+  }
 }
