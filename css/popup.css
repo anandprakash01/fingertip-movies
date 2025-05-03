@@ -80,8 +80,6 @@
   margin: 0.5rem 0;
 }
 
-
-/* Add these media queries for responsive popup */
 @media screen and (max-width: 1024px) {
   .description-popup {
     width: 70%;
@@ -95,12 +93,10 @@
     left: 10%;
     padding: 1.5rem;
   }
-  
   .description-popup img {
     width: 10rem;
     height: 15rem;
   }
-  
   .movie-details {
     padding: 0 1rem;
   }
@@ -115,18 +111,18 @@
     align-items: center;
     top: 10%;
   }
-  
+
   .description-popup img {
     width: 12rem;
     height: 16rem;
     margin-bottom: 1rem;
   }
-  
+
   .movie-details {
     padding: 0;
     text-align: center;
   }
-  
+
   .movie-details .popup-detail {
     max-height: 150px;
     overflow-y: auto;

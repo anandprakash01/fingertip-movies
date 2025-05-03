@@ -366,3 +366,43 @@ body {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .movie-card img {
+    width: 12rem;
+    height: 17rem;
+  }
+
+  .movie-name {
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #movies-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .movie-card {
+    margin: 0;
+    width: 100%;
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-name {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* #movies-container {
+    grid-template-columns: 1fr;
+  } */
+}
