@@ -262,7 +262,7 @@
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 0 2px; /* Add horizontal spacing between seats */
+  margin: 0 2px;
 }
 
 .seat.selected {
@@ -482,7 +482,6 @@
   margin-top: 1rem;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
   .booking-content {
     grid-template-columns: 1fr;
@@ -495,6 +494,10 @@
   .booking-details {
     order: 2;
   }
+
+  .booking-header h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -502,25 +505,144 @@
     justify-content: center;
   }
 
-  .seat-map {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
   .seat-info {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
+
+  #movie-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #movie-details img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .movie-info .rating {
+    justify-content: center;
+  }
+
+  .booking-container {
+    margin: 1rem auto;
+  }
+
+  .booking-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .seat-map {
+    width: 95%;
+  }
+
+  .modal-content {
+    margin: 10% auto;
+    padding: 1.5rem;
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 576px) {
-  .seat-map {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
   .payment-options {
     flex-direction: column;
     gap: 0.8rem;
+  }
+
+  .booking-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .movie-selection h2,
+  .booking-details h2 {
+    font-size: 1.3rem;
+  }
+
+  .seat {
+    width: 20px;
+    height: 20px;
+  }
+
+  .seat-row {
+    gap: 0.3rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .time-slot {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .search-container input,
+  .search-container button {
+    padding: 0.6rem;
+  }
+
+  .movie-item img {
+    width: 40px;
+    height: 60px;
+  }
+
+  .movie-item-details h3 {
+    font-size: 0.9rem;
+  }
+
+  .movie-item-details p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 0 0.5rem;
+  }
+
+  .selected-movie,
+  .show-selection,
+  .seat-selection,
+  .ticket-details,
+  .payment-section,
+  .movie-selection {
+    padding: 1rem;
+  }
+
+  .seat {
+    width: 18px;
+    height: 18px;
+  }
+
+  .seat-row {
+    gap: 0.2rem;
+  }
+
+  .row-label {
+    width: 15px;
+    font-size: 0.8rem;
+  }
+
+  .aisle {
+    width: 10px;
+  }
+
+  #proceed-payment,
+  #confirm-payment {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .close-modal {
+    top: 0.5rem;
+    right: 1rem;
   }
 }
 

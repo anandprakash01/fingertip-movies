@@ -755,3 +755,43 @@ input:checked + .slider:before {
     flex-direction: column;
   }
 }
+
+/* Add this media query at the end of your profile.css file */
+@media screen and (max-width: 768px) {
+  .profile-stats {
+    gap: 1rem; /* Reduce the gap between stat boxes */
+  }
+  
+  .stat {
+    min-width: 100px; /* Make stat boxes narrower */
+    padding: 0.8rem; /* Reduce padding */
+  }
+  
+  .stat-number {
+    font-size: 1.8rem; /* Slightly smaller font for numbers */
+  }
+  
+  .stat-label {
+    font-size: 0.8rem; /* Smaller font for labels */
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .profile-stats {
+    gap: 0.5rem; /* Further reduce gap */
+  }
+  
+  .stat {
+    min-width: 80px; /* Even narrower stat boxes */
+    padding: 0.6rem; /* Smaller padding */
+  }
+  
+  .stat-number {
+    font-size: 1.5rem; /* Even smaller numbers */
+  }
+  
+  .stat-label {
+    font-size: 0.7rem; /* Smaller labels */
+  }
+}

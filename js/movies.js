@@ -132,13 +132,4 @@ function showMovies(data) {
   });
 }
 
-export {
-  getMovies,
-  showMovies,
-  search,
-  lastURL,
-  currentPage,
-  nextPage,
-  prevPage,
-  totalPages,
-};
+export { getMovies,showMovies,search, currentPage, nextPage, prevPage, lastURL, totalPages };

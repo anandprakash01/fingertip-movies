@@ -20,7 +20,6 @@
     />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/popup.css" />
-    <link rel="stylesheet" href="./css/mediaquery.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
 
@@ -37,15 +36,17 @@
       </div>
       <div id="nav-links">
         <input type="text" id="search" placeholder="What are you looking for? " />
-        <a href="./booking.html" class="btn book-now">
-          <i class="fas fa-ticket-alt"></i> Book Now
-        </a>
-        <a href="./theaters.html" class="nav-link">
-          <i class="fas fa-film"></i> Theaters
-        </a>
-        <a href="./profile.html" class="nav-link">
-          <i class="fas fa-user-circle"></i> Profile
-        </a>
+        <div class="nav-buttons-container">  <!-- Add this class name -->
+          <a href="./booking.html" class="btn book-now">
+            <i class="fas fa-ticket-alt"></i> Book Now
+          </a>
+          <a href="./theaters.html" class="nav-link">
+            <i class="fas fa-film"></i> Theaters
+          </a>
+          <a href="./profile.html" class="nav-link">
+            <i class="fas fa-user-circle"></i> Profile
+          </a>
+        </div>
       </div>
     </nav>
 

@@ -5,6 +5,17 @@ import {getMovies} from "./movies.js";
 // DOM Elements
 let tagsEl;
 
+// Initialize when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  tagsEl = document.getElementById("tags");
+  if (tagsEl) {
+    setGenres();
+    console.log("Genres initialized");
+  } else {
+    console.error("Tags element not found");
+  }
+});
+
 // Genres data
 const genres = [
   {id: 28, name: "Action"},
@@ -30,17 +41,6 @@ const genres = [
 
 // Variables
 let selectedGenres = [];
-
-// Initialize when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  tagsEl = document.getElementById("tags");
-  if (tagsEl) {
-    setGenres();
-    console.log("Genres initialized");
-  } else {
-    console.error("Tags element not found");
-  }
-});
 
 function setGenres() {
   if (!tagsEl) return;

@@ -19,28 +19,30 @@
   padding: 0.5rem 0;
 }
 
-#first-word {
-  color: #e50914;
-  font-size: 1.8rem;
-  font-weight: bold;
+#home-logo #first-word {
   font-family: "Alkatra", cursive;
+  color: #cdcc00;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-left: 2rem;
+  user-select: none;
 }
 
-#second-word {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: "Alkatra", cursive;
+#home-logo #second-word {
+  font-family: "Delicious Handrawn";
+  color: #ff0000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 0.3rem;
+  user-select: none;
 }
 
-#nav-search,
 #nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.3rem 0;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
@@ -107,6 +109,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Search input styling */
 #search,
 #theater-search {
   padding: 0.5rem 0.8rem;
@@ -124,4 +127,170 @@
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
   box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.5);
+}
+
+/* Nav buttons container */
+.nav-buttons-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 60%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 95%;
+    min-height: auto;
+  }
+
+  #home-logo {
+    margin: 0.3rem auto;
+    text-align: center;
+    order: 1;
+  }
+
+  .search-container,
+  #nav-search {
+    width: 100%;
+    order: 2;
+    margin: 0.3rem auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #search,
+  #theater-search {
+    width: 100%;
+    max-width: 90%;
+    margin: 0.3rem auto;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.4rem;
+    padding: 0.2rem 0;
+    order: 3;
+  }
+
+  .nav-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .nav-link,
+  .btn.book-now {
+    width: auto;
+    max-width: none;
+    justify-content: center;
+    margin: 0.1rem 0;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .btn.book-now {
+    max-width: 100%;
+  }
+}
+
+/* Medium mobile devices and small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 70%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 0.6rem;
+    min-height: auto;
+  }
+
+  #home-logo {
+    margin: 0 auto 0.3rem;
+    text-align: center;
+    order: 1;
+  }
+
+  .search-container,
+  #nav-search {
+    width: 100%;
+    order: 2;
+    margin: 0.3rem auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.2rem 0;
+    order: 3;
+  }
+
+  #search,
+  #theater-search {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.1rem 0;
+  }
+}
+
+/* Tablets and iPads */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 0.8rem;
+    min-height: 4rem;
+  }
+
+  #nav-links {
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+  }
+
+  #search,
+  #theater-search {
+    width: 180px;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.7rem;
+    margin: 0.1rem 0;
+  }
+}
+
+/* Larger tablets and small desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .nav-bar {
+    padding: 0 1.5rem;
+  }
+
+  #nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1281px) {
+  .nav-bar {
+    flex-wrap: nowrap;
+  }
+
+  #nav-links {
+    flex-wrap: nowrap;
+  }
 }
